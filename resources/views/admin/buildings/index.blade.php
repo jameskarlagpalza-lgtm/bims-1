@@ -36,7 +36,7 @@
                             <!-- Address Badge -->
                             <div class="absolute bottom-3 left-3 right-3 bg-white bg-opacity-95 backdrop-blur rounded-lg px-3 py-2 shadow-md">
                                 <p class="text-xs font-medium text-gray-600">
-                                    <i class="fas fa-map-marker-alt text-red-500 mr-1"></i>
+                                    <i class="fas fa-location-dot text-red-500 mr-1"></i>
                                     {{ $building->address ?? 'No address set' }}
                                 </p>
                             </div>

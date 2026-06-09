@@ -72,7 +72,7 @@
                         </button>
                         <button onclick="switchTab('statistics')" id="tab-statistics"
                             class="tab-btn px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium border-b-2 border-transparent text-gray-600 hover:text-gray-900 whitespace-nowrap">
-                            <i class="fas fa-chart-bar mr-2"></i>
+                            <i class="fas fa-chart-column mr-2"></i>
                             Statistics
                         </button>
                     </div>
@@ -91,7 +91,7 @@
                             </a>
                             <a href="{{ route('campus.buildings.items.create', ["building" => $building, "room" => $room]) }}"
                                 class="inline-flex flex-col items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200 min-h-[80px]">
-                                <i class="fas fa-plus text-2xl mb-2"></i>
+                                <i class="fas fa-plus-circle text-2xl mb-2"></i>
                                 <span class="text-sm font-medium text-center">Add Item</span>
                             </a>
                             <a href="{{ route('campus.buildings.show', $building) }}"

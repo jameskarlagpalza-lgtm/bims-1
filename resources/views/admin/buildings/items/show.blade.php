@@ -17,7 +17,7 @@
 
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                 <div>
-                    <h1 class="text-3xl font-bold text-gray-900">{{ $item->name }}</h1>
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{{ $item->name }}</h1>
                     <p class="text-gray-600 mt-1">Item details and inventory information</p>
                 </div>
                 <div class="flex flex-wrap gap-2">

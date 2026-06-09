@@ -25,7 +25,7 @@
                 <div>
                     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{{ $item->name }}</h1>
                     <p class="text-gray-600">
-                        <i class="fas fa-box mr-2 text-blue-500"></i>
+                        <i class="fas fa-box-archive mr-2 text-blue-500"></i>
                         <span class="font-mono text-sm">{{ $item->serial_number ?? 'No serial number' }}</span>
                     </p>
                 </div>
@@ -78,7 +78,7 @@
                         </button>
                         <button onclick="switchTab('inventory')" id="tab-inventory"
                             class="tab-btn px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium border-b-2 border-transparent text-gray-600 hover:text-gray-900 whitespace-nowrap">
-                            <i class="fas fa-clipboard-list mr-2"></i>
+                            <i class="fas fa-warehouse mr-2"></i>
                             Inventory
                         </button>
                     </div>

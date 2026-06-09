@@ -25,7 +25,19 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+        <!-- Save All Button Section -->
+        @if($users->count() > 0)
+            <div class="mb-6 flex justify-end">
+                <button type="button" id="saveAllBtn" class="inline-flex items-center px-8 py-3 border border-transparent text-sm leading-4 font-bold rounded-md text-white bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-200 shadow-lg">
+                    <i class="fas fa-save mr-2"></i>
+                    Save All Assignments
+                </button>
+            </div>
+        @endif
+
+        <form id="assignmentsForm" action="{{ route('admin.users.saveAllAssignments') }}" method="POST">
+            @csrf
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                 <table class="min-w-full divide-y divide-gray-300">
                     <thead class="bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-300">
                         <tr>
@@ -57,12 +69,12 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     @if($user->campus)
                                         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800">
-                                            <i class="fas fa-map-marker-alt mr-1"></i>
+                                            <i class="fas fa-location-dot mr-1"></i>
                                             {{ $user->campus->name }}
                                         </span>
                                     @else
                                         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-700">
-                                            <i class="fas fa-times-circle mr-1"></i>
+                                            <i class="fas fa-ban mr-1"></i>
                                             Not Assigned
                                         </span>
                                     @endif
@@ -78,24 +90,16 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <form action="{{ route('admin.users.assignCampus', $user->id) }}" method="POST" class="flex items-center space-x-2">
-                                        @csrf
-                                        @method('PUT')
-                                        <select name="campus_id" class="block w-40 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm font-medium">
-                                            <option value="">-- Select Campus --</option>
-                                            @foreach ($campuses as $campus)
-                                                <option value="{{ $campus->id }}" {{ $user->campus_id == $campus->id ? 'selected' : '' }}>
-                                                    {{ $campus->name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                        <button type="submit" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded-md text-white bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-200">
-                                            <i class="fas fa-check mr-1"></i>
-                                            Assign
-                                        </button>
-                                    </form>
+                                    <select name="assignments[{{ $user->id }}]" class="block w-40 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm font-medium">
+                                        <option value="">-- Select Campus --</option>
+                                        @foreach ($campuses as $campus)
+                                            <option value="{{ $campus->id }}" {{ $user->campus_id == $campus->id ? 'selected' : '' }}>
+                                                {{ $campus->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </td>
-                                    </tr>
+                            </tr>
                         @endforeach
                         @if($users->count() === 0)
                             <tr>
@@ -109,6 +113,39 @@
                         @endif
                     </tbody>
                 </table>
-        </div>
+            </div>
+        </form>
+
+        <!-- Save All Button Section (Bottom) -->
+        @if($users->count() > 0)
+            <div class="mt-6 flex justify-end">
+                <button type="button" id="saveAllBtnBottom" class="inline-flex items-center px-8 py-3 border border-transparent text-sm leading-4 font-bold rounded-md text-white bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-200 shadow-lg">
+                    <i class="fas fa-save mr-2"></i>
+                    Save All Assignments
+                </button>
+            </div>
+        @endif
     </div>
+
+    @push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const saveAllBtn = document.getElementById('saveAllBtn');
+            const saveAllBtnBottom = document.getElementById('saveAllBtnBottom');
+            const assignmentsForm = document.getElementById('assignmentsForm');
+
+            function submitForm() {
+                assignmentsForm.submit();
+            }
+
+            if (saveAllBtn) {
+                saveAllBtn.addEventListener('click', submitForm);
+            }
+
+            if (saveAllBtnBottom) {
+                saveAllBtnBottom.addEventListener('click', submitForm);
+            }
+        });
+    </script>
+    @endpush
 @endsection

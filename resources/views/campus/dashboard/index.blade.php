@@ -33,7 +33,7 @@
             <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-300 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 w-14 h-14 bg-blue-200 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-building text-blue-700 text-2xl"></i>
+                        <i class="fas fa-gopuram text-blue-700 text-2xl"></i>
                     </div>
                     <div class="ml-4">
                         <h3 class="text-sm font-medium text-blue-700 uppercase tracking-wider">Buildings</h3>
@@ -45,7 +45,7 @@
             <div class="bg-gradient-to-br from-green-50 to-green-100 border border-green-300 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 w-14 h-14 bg-green-200 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-door-open text-green-700 text-2xl"></i>
+                        <i class="fas fa-dungeon text-green-700 text-2xl"></i>
                     </div>
                     <div class="ml-4">
                         <h3 class="text-sm font-medium text-green-700 uppercase tracking-wider">Total Rooms</h3>
@@ -88,7 +88,7 @@
         <div class="mb-8">
             <div class="flex items-center justify-between mb-6">
                 <h2 class="text-2xl font-bold text-gray-900 flex items-center">
-                    <i class="fas fa-layer-group text-blue-600 mr-3"></i>
+                    <i class="fas fa-city text-blue-600 mr-3"></i>
                     Your Buildings
                 </h2>
                 <a href="{{ route('campus.buildings.create') }}"

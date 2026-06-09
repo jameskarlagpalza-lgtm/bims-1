@@ -40,7 +40,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <div class="bg-white rounded-lg shadow-lg p-8 text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-building text-2xl text-blue-600"></i>
+                        <i class="fas fa-gopuram text-2xl text-blue-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Building Management</h3>
                     <p class="text-gray-600">Comprehensive building information including certificates, specifications, and
@@ -49,7 +49,7 @@
 
                 <div class="bg-white rounded-lg shadow-lg p-8 text-center">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-door-open text-2xl text-green-600"></i>
+                        <i class="fas fa-dungeon text-2xl text-green-600"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Room Tracking</h3>
                     <p class="text-gray-600">Track and manage individual rooms, their capacity, and assigned purposes within

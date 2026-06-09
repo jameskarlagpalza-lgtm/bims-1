@@ -30,7 +30,7 @@
                 <div class="bg-gradient-to-br from-green-50 to-green-100 border border-green-300 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="flex items-center">
                         <div class="flex-shrink-0 w-14 h-14 bg-green-200 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-university text-green-700 text-2xl"></i>
+                            <i class="fas fa-map text-green-700 text-2xl"></i>
                         </div>
                         <div class="ml-4">
                             <h3 class="text-sm font-medium text-green-700 uppercase tracking-wider">Campuses</h3>
@@ -42,7 +42,7 @@
                 <div class="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-300 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="flex items-center">
                         <div class="flex-shrink-0 w-14 h-14 bg-purple-200 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-building text-purple-700 text-2xl"></i>
+                            <i class="fas fa-gopuram text-purple-700 text-2xl"></i>
                         </div>
                         <div class="ml-4">
                             <h3 class="text-sm font-medium text-purple-700 uppercase tracking-wider">Buildings</h3>
@@ -54,7 +54,7 @@
                 <div class="bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-300 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div class="flex items-center">
                         <div class="flex-shrink-0 w-14 h-14 bg-orange-200 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-door-open text-orange-700 text-2xl"></i>
+                            <i class="fas fa-dungeon text-orange-700 text-2xl"></i>
                         </div>
                         <div class="ml-4">
                             <h3 class="text-sm font-medium text-orange-700 uppercase tracking-wider">Total Rooms</h3>
@@ -87,7 +87,7 @@
             <!-- Latest Buildings -->
             <div class="mt-8">
                 <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                    <i class="fas fa-history text-blue-600 mr-3"></i>
+                    <i class="fas fa-clock text-blue-600 mr-3"></i>
                     Latest Buildings
                 </h2>
                 <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">

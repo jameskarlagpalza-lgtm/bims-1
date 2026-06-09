@@ -19,7 +19,7 @@
                 <div>
                     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{{ $building->name }}</h1>
                     <p class="text-gray-600">
-                        <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                        <i class="fas fa-location-dot mr-2 text-red-500"></i>
                         {{ $building->address ?? 'No address available' }}
                     </p>
                 </div>
@@ -81,7 +81,7 @@
                         </button>
                         <button onclick="switchTab('certificates')" id="tab-certificates"
                             class="tab-btn px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium border-b-2 border-transparent text-gray-600 hover:text-gray-900 whitespace-nowrap">
-                            <i class="fas fa-certificate mr-2"></i>
+                            <i class="fas fa-scroll mr-2"></i>
                             Certificates
                         </button>
                     </div>
